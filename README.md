@@ -1,8 +1,29 @@
 # 🌐 VPC Peering via Terraform (AWS)
 
+![Terraform](https://img.shields.io/badge/Terraform-IaC-623CE4?logo=terraform)
+![AWS](https://img.shields.io/badge/AWS-Cloud-FF9900?logo=amazonaws)
+![Status](https://img.shields.io/badge/Status-Active-success)
+![License](https://img.shields.io/badge/License-MIT-blue)
+
 This repository demonstrates how to create **VPC Peering between two AWS VPCs using Terraform**, following Infrastructure as Code (IaC) best practices.
 
 The setup uses **multiple AWS providers** to provision resources in **different AWS regions**, making it a practical reference for real-world multi-region architectures.
+
+---
+
+## 🖼 Architecture Overview
+
+```
++----------------------+           VPC Peering            +----------------------+
+|  Primary VPC         | <------------------------------> |  Secondary VPC       |
+|  (ap-south-1)        |                                  |  (eu-central-1)      |
+|                      |                                  |                      |
+|  EC2 Instance        |                                  |  EC2 Instance        |
+|  Private/Public Subnet|                                  |  Private/Public Subnet|
++----------+-----------+                                  +-----------+----------+
+           |                                                                  |
+           |---------------- Internet Gateway -------------------------------|
+```
 
 ---
 
@@ -94,6 +115,6 @@ terraform destroy
 **Akshay Kumar**
 Cloud & DevOps Engineer
 
-If you found this useful, feel free to ⭐ the repo and connect with me on LinkedIn!
+This project is actively maintained and continuously improved to help the DevOps community learn, build, and scale cloud infrastructure.
 
 Happy Terraforming 🚀
